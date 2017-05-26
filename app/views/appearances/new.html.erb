@@ -1,0 +1,14 @@
+<h1>Add a New Guest Appearance</h1>
+
+<%= form_for @appearance do |f| %>
+  <%= f.label :episode_id, "Episode ID" %><br>
+  <%= f.text_field :episode_id %><br>
+
+  <%= f.label :guest_id, "Guest ID" %><br>
+  <%= f.text_field :guest_id %><br>
+
+  <%= f.label :rating, "Rating (1-5)" %><br>
+  <%= f.number_field :rating %><br>
+
+  <%= f.submit %>
+<% end %>

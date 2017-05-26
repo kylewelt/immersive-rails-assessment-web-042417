@@ -9,6 +9,20 @@
   </head>
 
   <body>
+    <%= form_tag login_path do %>
+      <%= text_field_tag :username %>
+      <%= text_field_tag :password %>
+      <%= submit_tag "Log in" %>
+    <% end %>
+
+    <% flash.each do |name, msg| %>
+      <% if name == "error" %>
+        <%= content_tag :div, msg %>
+      <% else %>
+        <%= content_tag :div, msg %>
+      <% end %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
